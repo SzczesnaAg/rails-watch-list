@@ -9,9 +9,12 @@
     <div class="card" style="width: 18rem; display: inline-flex;">
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
+        <% link_to "Go", list_path(list.id) %>
       </div>
     </div>
   <% end %>
 </div>
+
+
 
 
