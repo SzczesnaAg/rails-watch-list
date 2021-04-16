@@ -1,4 +1,10 @@
-<h1>My lists</h1>
+
+  <div class="banner" style="background-image: url(<%= asset_path('cover.jpg') %>)">
+    <div class=container>
+      <h1>My lists</h1>
+    </div>
+  </div>
+
 
 <div style="margin: 12px">
 <%= link_to 'Create a movie list', new_list_path, class: "btn btn-primary" %>
@@ -6,7 +12,7 @@
 
 <div class="row">
     <% @lists.each do |list| %>
-      <div class="co-12 colsm-6 col-md-4" style='margin: 12px'>
+      <div class="co-12 colsm-6 col-md-4" style='margin: 12px; border: solid 2px lightgray'>
         <%= link_to list_path(list), class:'text-decoration-none' do %>
           <div class="card-category" data-aos="zoom-in">
             <strong><%= list.name %></strong>
@@ -15,7 +21,5 @@
       </div>
     <% end %>
   </div>
-
-
 
 
