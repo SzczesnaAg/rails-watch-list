@@ -6,7 +6,7 @@
 
 <div class="row">
     <% @lists.each do |list| %>
-      <div class="co-12 colsm-6 col-md-4">
+      <div class="co-12 colsm-6 col-md-4" style='margin: 12px'>
         <%= link_to list_path(list), class:'text-decoration-none' do %>
           <div class="card-category" data-aos="zoom-in">
             <strong><%= list.name %></strong>
