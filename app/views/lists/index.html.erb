@@ -10,16 +10,14 @@
 <%= link_to 'Create a movie list', new_list_path, class: "btn btn-primary" %>
 </div>
 
-<div class="row">
-    <% @lists.each do |list| %>
-      <div class="co-12 colsm-6 col-md-4" style='margin: 12px; border: solid 2px lightgray'>
-        <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in">
-            <strong><%= list.name %></strong>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+<div class="main_cards">
+      <% @lists.each do |list| %>
+          <%= link_to list_path(list), class:'text-decoration-none' do %>
+            <div class="card_list" style="background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('vintige.jpg') %>)">
+              <strong><%= list.name %></strong>
+            </div>
+          <% end %>
+      <% end %>
+</div>
 
 

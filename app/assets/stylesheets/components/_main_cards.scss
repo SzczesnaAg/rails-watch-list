@@ -1,0 +1,24 @@
+.main_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media(max-width: 576px) {
+.main_cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card_list {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.main_cards a {
+  color: white
+}
