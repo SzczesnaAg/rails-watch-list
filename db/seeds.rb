@@ -23,10 +23,8 @@ puts "Database cleaned"
 
 url = "http://tmdb.lewagon.com/movie/top_rated"
 15.times do |i|
-  puts "Importing movies from page #{i + 1}"
   movies = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
   movies.each do |movie|
-    puts "Creating #{movie['title']}"
     base_poster_url = "https://image.tmdb.org/t/p/original"
     Movie.create(
       title: movie['title'],
@@ -36,4 +34,4 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
     )
   end
 end
-puts "Movies created"
+puts "Finished"
